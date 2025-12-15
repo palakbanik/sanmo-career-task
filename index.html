@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- font awesome link -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- remix icon link -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+            integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- css link -->
+        <link rel="stylesheet" href="./css/main.css" />
+        <title>SanMo Careers Task || Polok Banik</title>
+    </head>
+    <body>
+        <!-- header -->
+        <header id="header" class="header">
+            <!-- LOGO & SEARCH BAR & ICONS -->
+            <div class="header-first-section">
+                <!-- logo -->
+                <a href="#">
+                    <img
+                        src="./assets/images/logo-image.png"
+                        alt="logo"
+                        draggable="false"
+                        class="logo"
+                    />
+                </a>
+
+                <!-- search bar -->
+                <div class="header-search-bar">
+                    <select
+                        class="header-search-bar-select"
+                        name="categories"
+                        id="categories"
+                    >
+                        <option>All Categories</option>
+                        <option value="category-2">category 1</option>
+                        <option value="category-3">category 2</option>
+                    </select>
+
+                    <form class="header-form">
+                        <input
+                            type="text"
+                            name="text"
+                            id="text"
+                            placeholder="Search for items..."
+                            autocomplete="off"
+                            class="header-form-input"
+                        />
+
+                        <button type="submit" class="header-form-button">
+                            <img
+                                src="./assets/icons/search-icon.svg"
+                                alt="search icon"
+                                draggable="false"
+                            />
+                        </button>
+                    </form>
+                </div>
+
+                <!-- icons -->
+                <div class="header-icons">
+                    <!-- icon 1 -->
+                    <button class="icon">
+                        <div class="icon-img">
+                            <img
+                                src="./assets/icons/circle-around.svg"
+                                alt="circle around icon"
+                                draggable="false"
+                            />
+                            <span>3</span>
+                        </div>
+                        <p>Compare</p>
+                    </button>
+                    <!-- icon 2 -->
+                    <button class="icon">
+                        <div class="icon-img">
+                            <img
+                                src="./assets/icons/love-icon.svg"
+                                alt="love icon"
+                                draggable="false"
+                            />
+                            <span>6</span>
+                        </div>
+                        <p>Wishlist</p>
+                    </button>
+                    <!-- icon 3 -->
+                    <button class="icon">
+                        <div class="icon-img">
+                            <img
+                                src="./assets/icons/shopping-cart-icon.svg"
+                                alt="shopping cart icon"
+                                draggable="false"
+                            />
+                            <span>2</span>
+                        </div>
+                        <p>Cart</p>
+                    </button>
+                    <!-- icon 4 -->
+                    <button class="icon">
+                        <div class="icon-img">
+                            <img
+                                src="./assets/icons/profile-icon.svg"
+                                alt="profile icon"
+                                draggable="false"
+                            />
+                        </div>
+                        <p>Account</p>
+                    </button>
+                </div>
+            </div>
+
+            <!-- nav menu -->
+            <div class="header-second-section">
+                <nav class="nav">
+                    <!-- selection -->
+                    <div class="header-nav-selection">
+                        <img
+                            src="./assets/icons/menu-icon.svg"
+                            alt="menu icon"
+                        />
+                        <select name="all-categories" id="all-categories">
+                            <option>Browse All Categories</option>
+                        </select>
+                    </div>
+
+                    <!-- links -->
+                    <ul class="nav-links">
+                        <li class="nav-link fire">
+                            <img
+                                src="./assets/icons/fire-icon.svg"
+                                alt="fire icon"
+                                draggable="false"
+                            />
+                            <a href="#">Deals</a>
+                        </li>
+
+                        <li class="nav-link active">
+                            <a href="#">Home</a>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#">About</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#">Shop</a>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#">Vendors</a>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#">Mega menu</a>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#">Compare</a>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#">Pages</a>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </li>
+                        <li class="nav-link">
+                            <a href="#">Contact</a>
+                        </li>
+                        <li class="nav-link">
+                            <img
+                                src="./assets/icons/headphone-icon.svg"
+                                alt="headphone-icon"
+                                draggable="false"
+                            />
+                        </li>
+                    </ul>
+
+                    <!-- support center -->
+                    <div class="header-support-center">
+                        <h3>1900-888</h3>
+                        <p>24/7 Support Center</p>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero"></section>
+
+        <!-- Featured Section -->
+        <section id="featured" class="featured"></section>
+
+        <!-- Popular Product Section -->
+        <section id="popular" class="popular"></section>
+
+        <!-- Best Seals Section -->
+        <section id="popular" class="popular"></section>
+
+        <!-- Deals Section -->
+        <section id="popular" class="popular"></section>
+    </body>
+</html>
