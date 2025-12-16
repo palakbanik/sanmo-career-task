@@ -19,15 +19,23 @@
     --featured-big-bg-color-two: #f3e8e8;
     --featured-big-bg-color-three: #e7eaf3;
 
+    --popular-add-btn-bg: #def9ec;
+    --popular-card-pink-bg: #f74b81;
+    --popular-card-blue-bg: #67bcee;
+
+    --best-sales-bg-color: #d8ebe5;
+
     /* custom text color */
     --custom-text-white-color: #ffffff;
     --custom-text-black-color: #000000;
     --custom-text-primary-color: #3bb77e;
     --custom-text-light-gray: #cacaca;
     --custom-text-dark-gray: #b0a9a9;
+    --star-color: #fdc040;
 
     /* custom border color */
     --custom-border-color: #81b13d;
+    --custom-popular-border-color: #cebbbb;
 }
 
 * {
@@ -60,7 +68,7 @@ a {
     cursor: pointer;
 }
 
-.show-now-btn {
+.shop-now-btn {
     width: 100px;
     height: 28px;
     background: var(--custom-text-primary-color);
@@ -78,6 +86,42 @@ a {
     border: none;
     outline: none;
     cursor: pointer;
+}
+
+.add-btn {
+    width: 71px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    background: var(--popular-add-btn-bg);
+    color: var(--custom-text-primary-color);
+    border-radius: 4px;
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background: var(--custom-text-primary-color);
+    color: var(--custom-text-white-color);
+}
+
+.add-to-cart-btn {
+    width: 211px;
+    height: 43px;
+    background: var(--custom-text-primary-color);
+    color: var(--custom-text-white-color);
+    border-radius: 8px;
+}
+
+.add-to-cart-btn img {
+    color: white;
 }
 
 .featured-bg-one {
@@ -121,9 +165,66 @@ a {
     background: var(--featured-big-bg-color-three);
 }
 
+.primary-text {
+    color: var(--custom-text-primary-color);
+}
+
+.gray-text {
+    color: var(--custom-text-dark-gray);
+}
+
+.star {
+    color: var(--star-color);
+}
+
+.card-pink-bg {
+    width: 92px;
+    height: 41px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 30px;
+    background: var(--popular-card-pink-bg);
+    color: var(--custom-text-white-color);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.card-blue-bg {
+    width: 92px;
+    height: 41px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 30px;
+    background: var(--popular-card-blue-bg);
+    color: var(--custom-text-white-color);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.card-green-bg {
+    width: 92px;
+    height: 41px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 30px;
+    background: var(--custom-text-primary-color);
+    color: var(--custom-text-white-color);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 ::selection {
     background-color: var(--custom-text-primary-color);
     color: var(--custom-text-white-color);
+}
+
+.active,
+.active a {
+    color: #3bb77e;
 }
 
 /* HEADER */
@@ -294,11 +395,6 @@ a {
     transition: all 0.2s ease;
 }
 
-.active,
-.active a {
-    color: #3bb77e;
-}
-
 .nav-links .nav-link:hover,
 .nav-links .nav-link:hover a {
     color: #3bb77e;
@@ -392,6 +488,7 @@ a {
     padding-left: 45px;
     font-weight: 500;
     font-size: 15px;
+    font-family: var(--font-roboto);
     line-height: 1;
     letter-spacing: 0.02em;
 }
@@ -403,6 +500,7 @@ a {
 .hero-input button {
     width: 164px;
     height: 67px;
+    font-family: var(--font-roboto);
     font-weight: 500;
     font-size: 15px;
     line-height: 1;
@@ -536,6 +634,221 @@ a {
 }
 
 .featured-big-card .featured-big-card-img img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/* POPULAR PRODUCT SECTION */
+.popular-section {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding: 0 72px 39px 61px;
+    display: flex;
+    flex-direction: column;
+    gap: 47px;
+}
+
+.popular-section .popular-text-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular-section .popular-text-content h3 {
+    font-family: var(--font-inter);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: 0em;
+}
+
+.popular-text-content .popular-lists {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.popular-text-content .popular-lists .popular-list {
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0em;
+}
+
+.popular-text-content .popular-lists .popular-list:hover a {
+    color: var(--custom-text-primary-color);
+}
+
+.popular-section .popular-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.popular-cards .popular-card {
+    width: 310px;
+    height: 438px;
+    border: 1px solid var(--custom-popular-border-color);
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.popular-cards .popular-card:hover {
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.6);
+}
+
+.popular-card img {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.popular-card .popular-card-text {
+    position: absolute;
+    bottom: 41px;
+}
+
+.popular-card .popular-card-text {
+    width: 100%;
+    max-width: 259px;
+}
+
+.popular-card .popular-card-text h4 {
+    font-family: var(--font-poppins);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.popular-card-text .popular-card-stars {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.popular-card-text .popular-card-stars .star {
+    width: 18px;
+    height: 18px;
+}
+
+.popular-card-text .popular-card-stars .star-point {
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.popular-card-text .popular-card-amount {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.popular-card-text .popular-card-amount p {
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    color: var(--custom-text-dark-gray);
+    margin: 8px 0;
+}
+
+.popular-card-amount .card-amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular-card-text .popular-card-amount .amount {
+    font-family: var(--font-roboto);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.popular-card-text .popular-card-amount .amount span {
+    font-size: 14px;
+}
+
+/* BEST SALES PRODUCT */
+
+.best-sales {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding: 0 25px 38px 27px;
+}
+
+.best-sales .best-sales-texts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.best-sales .best-sales-texts h3 {
+    font-family: var(--font-inter);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1;
+    padding-left: 55px;
+}
+
+.best-sales .best-sales-products-show {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.best-sales .best-sales-lists {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    padding-right: 99px;
+}
+
+.best-sales .best-sales-texts .best-sales-lists a:hover {
+    color: var(--custom-text-primary-color);
+}
+
+.best-sales-naturals-product {
+    width: 321px;
+    height: 468px;
+    background: var(--best-sales-bg-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.best-sales-naturals-product .best-sales-naturals-product-texts {
+    width: 100%;
+    max-width: 202px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: absolute;
+    top: 59px;
+    left: 31px;
+}
+
+.best-sales-naturals-product .best-sales-naturals-product-texts h3 {
+    font-family: var(--font-poppins);
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.best-sales-naturals-product .best-sales-naturals-product-img {
     position: absolute;
     right: 0;
     bottom: 0;
