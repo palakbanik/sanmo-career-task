@@ -95,8 +95,7 @@ a {
 .header-search-bar .header-form .header-form-input {
     font-weight: 600;
     font-size: 16px;
-    line-height: 100%;
-    letter-spacing: 0%;
+    line-height: 1;
     flex: 1;
     outline: none;
     border: none;
@@ -142,8 +141,7 @@ a {
     opacity: 1;
     font-weight: 600;
     font-size: 12px;
-    line-height: 100%;
-    letter-spacing: 0%;
+    line-height: 1;
     background: var(--custom-text-primary-color);
     border-radius: 50%;
     color: var(--custom-text-white-color);
@@ -157,8 +155,7 @@ a {
 .header-icons .icon p {
     font-weight: 600;
     font-size: 18px;
-    line-height: 100%;
-    letter-spacing: 0%;
+    line-height: 1;
     color: var(--custom-text-light-gray);
 }
 
@@ -199,8 +196,7 @@ a {
     color: var(--custom-text-white-color);
     font-weight: 600;
     font-size: 18px;
-    line-height: 100%;
-    letter-spacing: 0%;
+    line-height: 1;
     cursor: pointer;
 }
 
@@ -221,8 +217,7 @@ a {
 .nav-links .nav-link a {
     font-weight: 600;
     font-size: 18px;
-    line-height: 100%;
-    letter-spacing: 0%;
+    line-height: 1;
     transition: all 0.2s ease;
 }
 
@@ -246,14 +241,104 @@ a {
 .header-support-center h3 {
     font-weight: 600;
     font-size: 24px;
-    line-height: 100%;
-    letter-spacing: 7%;
+    line-height: 1;
+    letter-spacing: 0.07em;
     color: var(--custom-text-primary-color);
 }
 .header-support-center p {
     font-weight: 500;
     font-size: 14px;
-    line-height: 100%;
-    letter-spacing: 0%;
+    line-height: 1;
     color: var(--custom-text-light-gray);
+}
+
+/* HERO SECTION */
+
+.hero {
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+    margin-inline: auto;
+    padding: 27px 56px 60px 61px;
+}
+
+.hero .hero-section {
+    background: url(../assets/images/bg-image.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 126px;
+}
+
+.hero-text-content .hero-text {
+    width: 411px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 55px;
+}
+
+.hero-text h1 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: 0.09em;
+}
+
+.hero-text p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    color: var(--custom-text-dark-gray);
+}
+
+.hero-text-content .hero-input {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    width: 414px;
+    height: 67px;
+    border-radius: 100px;
+    position: relative;
+}
+
+.hero-input input {
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+    padding-left: 45px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1;
+    letter-spacing: 0.02em;
+}
+
+.hero-input input::placeholder {
+    color: var(--custom-text-dark-gray);
+}
+
+.hero-input button {
+    width: 164px;
+    height: 67px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    background: var(--custom-text-primary-color);
+    color: var(--custom-text-white-color);
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
