@@ -22,8 +22,10 @@
     --popular-add-btn-bg: #def9ec;
     --popular-card-pink-bg: #f74b81;
     --popular-card-blue-bg: #67bcee;
+    --popular-card-purple-bg: #9747ff;
 
     --best-sales-bg-color: #d8ebe5;
+    --best-sales-range-bg-color: #d9d9d9;
 
     /* custom text color */
     --custom-text-white-color: #ffffff;
@@ -118,6 +120,8 @@ a {
     background: var(--custom-text-primary-color);
     color: var(--custom-text-white-color);
     border-radius: 8px;
+    outline: none;
+    border: none;
 }
 
 .add-to-cart-btn img {
@@ -166,15 +170,28 @@ a {
 }
 
 .primary-text {
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
     color: var(--custom-text-primary-color);
 }
 
 .gray-text {
     color: var(--custom-text-dark-gray);
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.green-text {
+    color: var(--custom-text-primary-color);
 }
 
 .star {
     color: var(--star-color);
+    font-size: 14px;
 }
 
 .card-pink-bg {
@@ -189,6 +206,10 @@ a {
     position: absolute;
     top: 0;
     left: 0;
+    font-family: var(--font-inter);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1;
 }
 .card-blue-bg {
     width: 92px;
@@ -202,6 +223,10 @@ a {
     position: absolute;
     top: 0;
     left: 0;
+    font-family: var(--font-inter);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1;
 }
 .card-green-bg {
     width: 92px;
@@ -215,6 +240,44 @@ a {
     position: absolute;
     top: 0;
     left: 0;
+    font-family: var(--font-inter);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1;
+}
+.card-purple-bg {
+    width: 92px;
+    height: 41px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 30px;
+    background: var(--popular-card-purple-bg);
+    color: var(--custom-text-white-color);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: var(--font-inter);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1;
+}
+.card-yellow-bg {
+    width: 92px;
+    height: 41px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 30px;
+    background: var(--star-color);
+    color: var(--custom-text-white-color);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: var(--font-inter);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1;
 }
 
 ::selection {
@@ -733,8 +796,7 @@ a {
 }
 
 .popular-card-text .popular-card-stars .star {
-    width: 18px;
-    height: 18px;
+    font-size: 14px;
 }
 
 .popular-card-text .popular-card-stars .star-point {
@@ -804,6 +866,7 @@ a {
     display: flex;
     align-items: center;
     gap: 15px;
+    position: relative;
 }
 
 .best-sales .best-sales-lists {
@@ -853,3 +916,203 @@ a {
     right: 0;
     bottom: 0;
 }
+
+.best-sales-product-cards {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.best-sales-product-cards .best-sales-product-card {
+    width: 252px;
+    height: 468px;
+    border: 1px solid var(--custom-text-light-gray);
+    border-radius: 10px;
+    padding: 18px 20px 22px;
+    cursor: default;
+    position: relative;
+}
+
+.best-sales-product-card .best-sales-img {
+    display: grid;
+    place-items: center;
+}
+
+.best-sales-product-cards
+    .best-sales-product-card:hover
+    .best-sales-card-texts
+    h4 {
+    color: var(--custom-text-primary-color);
+}
+
+.best-sales-product-cards .best-sales-product-card:hover .add-to-cart-btn {
+    color: var(--custom-text-white-color);
+    background: var(--star-color);
+}
+
+.best-sales-product-card .best-sales-card-texts p {
+    font-family: var(--font-roboto);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--custom-text-light-gray);
+    margin-bottom: 6px;
+}
+
+.best-sales-product-card .best-sales-card-texts h4 {
+    font-family: var(--font-poppins);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+.best-sales-card-texts .stars-color {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.best-sales-card-texts .amount .primary-text {
+    font-family: var(--font-roboto);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.best-sales-card-texts .amount .gray-text {
+    font-family: var(--font-roboto);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.best-sales-card-texts .product-range {
+    width: 100%;
+    height: 7px;
+    background: var(--best-sales-range-bg-color);
+    margin-top: 16px;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.best-sales-card-texts .product-range .half-range {
+    width: 50%;
+    height: 100%;
+    background: var(--custom-text-primary-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.best-sales-card-texts .sold {
+    font-family: var(--font-roboto);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.best-sales-product-card .add-to-cart-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+/* DEALS SECTION */
+
+.deals {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding: 0 32px 144px;
+}
+
+.deals .deals-heading {
+    font-family: var(--font-inter);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1;
+    margin-bottom: 34px;
+}
+
+.deals .deals-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.deals .deals-cards .deals-card {
+    width: 329px;
+    height: auto;
+    position: relative;
+}
+
+.deals-cards .deals-card .deals-card-texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 11px;
+    position: absolute;
+    bottom: -102px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.deals-card .deals-card-texts .deals-card-small-boxes {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.deals-card .deals-card-texts .deals-card-small-boxes .small-box {
+    width: 64px;
+    height: 66px;
+    background: var(--custom-text-white-color);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.deals-card .deals-card-texts .deals-card-small-boxes .small-box p {
+    font-family: var(--font-inter);
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1;
+    text-align: center;
+}
+
+.deals-card .deals-card-texts .deals-card-big-box {
+    width: 295px;
+    height: 171px;
+    background: var(--custom-text-white-color);
+    border-radius: 6px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 20px 18px 14px;
+}
+
+.deals-card-texts .deals-card-big-box .big-box-details .details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.deals-card-texts .deals-card-big-box .big-box-details .details h5 {
+    width: 220px;
+    font-family: var(--font-poppins);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.big-box-details .card-amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 18px;
+}
+
+/* TOP PRODUCTS */
